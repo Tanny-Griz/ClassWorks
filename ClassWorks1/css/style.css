@@ -1,0 +1,11 @@
+.list-5 ol {
+    list-style-type: none;
+    counter-reset: item;
+}
+
+.list-5 li:before {
+    content: counter(item)") ";
+    content: counters(item, ".")". ";
+    counter-increment: item 2;
+    margin-right: 4px;
+}
