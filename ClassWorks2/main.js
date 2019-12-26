@@ -1,62 +1,61 @@
-let a = 8;
-let b = "4";
+// let a = 5;
+// let b = 6;
+// if ( a == b) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
 
-let text = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nobis
-a consectetur, repellendus illum facilis $window.screen facere quod itaque, repudiandae omnis ad? 
-Placeat molestiae quas similique ipsa aut culpa cum quaerat!`;
+// const user1.choise = prompt('user1 enter choise: ');
+// console.log(user1.choise);
+// const user2.choise = prompt('user2 enter choise: ');
+// console.log(user2.choise);
+let user1 = {
+    name: "",
+    choise: "",
+}
 
-// console.log(b);
-// console.log(a + +b);
+let user2 = {
+    name: "",
+    choise: "",
+}
 
-let user = { 
-    name: 'Tanya', 
-    surname: 'Griz',
-    age: 30,
-    isFamale: true,
-    clothes: {
-        isHead: true,
+user1.name = prompt('user1 enter name: ');
+user2.name = prompt('user2 enter name: ');
 
+
+user1.choise = prompt(user1.name + ' enter choise:');
+user2.choise = prompt(user2.name + ' enter choise:');
+
+console.log(user1, user2);
+
+const checkOnEmptyFields = (u) => {
+    if (!u.name.length) {
+        console.log(u + ' name empty');
+        u.name = prompt('enter name pls!');
+    }
+    if(!u.choise.length) {
+        console.log(u + ' value is empty');
+        u.choise = prompt(u + ' enter choise: ');
     }
 }
 
-function getName() {
-    console.log(user.name);
+checkOnEmptyFields(user1);
+checkOnEmptyFields(user2);
+
+
+if (user1.choise == 'k' && user2.choise == 'n' ||
+    user1.choise == 'n' && user2.choise == 'b' ||
+    user1.choise == 'b' && user2.choise == 'k') {
+    console.log(`${user1.name} won`);
+} else if (user1.choise == 'k' && user2.choise == 'k' ||
+    user1.choise == 'n' && user2.choise == 'n' ||
+    user1.choise == 'b' && user2.choise == 'b') {
+    console.log('Draw');
+} else {
+    console.log(`${user2.name} won`);
 }
-getName();
 
-
-const getAge = function() {
-    console.log(user.age);
-}
-getAge();
-
-
-// foo(); // undef 
-// var foo = function() {
-//     console.log("123456");
-// }
-
-let foo2 = (num1, num2) => {
-    // let num1 = undefined;
-    // let num2 = undefined;
-
-    console.log(num1 + num2);
-}
-foo2(1, 5);
-
-
-let foo3 = (num1, num2) => {
-    console.log(num1 * num2);
-}
-foo3(5, 5);
-
-let foo4 = (num1 = 5, num2 = 6) => {
-    console.log(num1 / num2);
-}
-foo4();
-foo4(8, 5);
-
-
-
+// ------------
 
 
