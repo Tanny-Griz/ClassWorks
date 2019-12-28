@@ -11,17 +11,17 @@ function User({name, surname, age}) {
     this.indexOfUser = arrOfUsers.length - 1;
 }
 
-const userWU = {
-    name: "Vasya",
-    surname: "Samoylow",
-    age: 18,
-}
+// const userWU = {
+//     name: "Vasya",
+//     surname: "Samoylow",
+//     age: 18,
+// }
 
-const user = new User(userWU);
+// const user = new User(userWU);
 // const userSecond = new User('Ann', 'Samoylowa', 22);
 
-console.log("userWU: ", userWU);
-console.log("user: ", user);
+// console.log("userWU: ", userWU);
+// console.log("user: ", user);
 
 
 // function User2(obj = {}) {
