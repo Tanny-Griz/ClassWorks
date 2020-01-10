@@ -403,8 +403,10 @@ const getPizzasByCalorisity = (min, max)  => {
 
 getPizzasByCalorisity(1300, 1500);
 
+
+let pizzaList2 = [];
 function Pizza(name, arrOfIds) {
-    this.id = pizzaList.length;
+    this.id = pizzaList2.length;
     this.name = name;
     this.caloricity = 100;
     this.price = 50;
@@ -421,9 +423,10 @@ function Pizza(name, arrOfIds) {
     }
 
     this.isCustom = true;
-    pizzaList.push(this);
+    pizzaList2.push(this);
 }
 
 const myPizza = new Pizza("Nazvanie", [1, 4, 6]);
+const myPizza2 = new Pizza("Nazvanie2", [3, 2, 1, 3]);
 
-console.log(myPizza);
+console.log(pizzaList2);
