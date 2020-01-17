@@ -27,7 +27,7 @@ function roo(pref) {
 console.log(roo.call(human, 'I am ')); // перв парам это this
 
 let obj = {
-    name: 'Kopi',
+    name: 'Abs',
     gender: 'male'
 }
 
@@ -56,20 +56,38 @@ for (let value of Object.entries(obj1)) {
 // массивы
 
 // Array.prototype.метод
- 
-let arr = ['Tim', 'Pol', 'Ron']
+console.log('-------arr-------')
+let arr = ['Tim', 'Pol', 'Ron', 'Bob', 'Jhon', "Kol"]
+console.log(arr)
+
+console.log('-------push в конец-------')
 arr.push('Anna')
 console.log(arr)
-arr.shift()
+
+console.log('-------shift минус первый-------')
+arr.shift() // - первый 'Tim'
 console.log(arr)
+
+console.log('-------unshift добовил в начало-------')
 arr.unshift('Geo')
 console.log(arr)
+
+console.log('------pop удалил последний-------')
 arr.pop()
 console.log(arr)
 
-arr.splice(1, 2) // берет первый включая и удаляет два
-arr.slice()
-arr.join(' ; ')
+console.log('----------splice------------')
+arr.splice(1, 2) // берет первый включительно и удаляет два
+console.log(arr)
+
+console.log('----------slice------------')
+// возвращает новый массив, содержащий копию части исходного массива.
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals.slice(2, 4)); // ["camel", "duck"]
+console.log(animals)
+console.log('----------join------------')
+animals.join(' ; ')
+console.log(animals)
 
 
 

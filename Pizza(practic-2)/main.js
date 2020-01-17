@@ -375,17 +375,19 @@ const compositionList = [
   }
 ];
 
+// Задание. Создать функцию, которая создает новую пиццу с указаными компонентами, назвать ее. 
+// посчитать caloricity, price, добавить все composition
+
 function createPizza(name, arrOfIds) {
   let pizzaObj = {
     name: name,
-    id: pizzaList[pizzaList.length + 1].id,
-   // img: pizzaObj.id + '.jpg', // не получается
+    id: pizzaList[pizzaList.length - 1].id + 1,
+    img: (pizzaList[pizzaList.length - 1].id + 1) + '.jpg',
     composition: [],
     caloricity: 1000,
     price: 100,
   };
   
-  // перебор 1, 3, 5
   for (let value of arrOfIds) {
     // перебор свойств compositionList
     for (let comp of compositionList){

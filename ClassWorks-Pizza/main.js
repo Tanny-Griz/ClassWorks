@@ -404,6 +404,9 @@ const getPizzasByCalorisity = (min, max)  => {
 getPizzasByCalorisity(1300, 1500);
 
 
+// Задание. Создать конструктор, на его основе создать экземпляр с указаными компонентами, назвать ее. 
+// посчитать caloricity, price, добавить все composition
+
 let pizzaList2 = [];
 function Pizza(name, arrOfIds) {
     this.id = pizzaList2.length;
