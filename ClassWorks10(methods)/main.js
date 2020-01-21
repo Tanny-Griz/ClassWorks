@@ -1,3 +1,7 @@
+console.log('----------forEach------------')
+// Вызывает функцию для каждого элемента в массиве
+
+
 condidateArr.forEach(item => {
     item.registered = item.registered.split(' ')[0]
 })
@@ -21,7 +25,9 @@ condidateArr.forEach((cond, index) => {
     }
 })
 
-// filter
+console.log('----------filter------------')
+// Создаёт новый массив со всеми элементами этого массива, для которых функция фильтрации возвращает true.
+
 const filterArr = [];
 condidateArr.filter((cond, index) => {
     // если тру, добавит в новый массив
@@ -40,7 +46,9 @@ Array.prototype.mySomeMethod = function (callback) {
     return a
 }
 
-// map
+console.log('----------map()------------')
+// Создаёт новый массив с результатами вызова указанной функции на каждом элементе данного массива.
+
 condidateArr.map((cond, index) => {
     // return console.log({id: cond._id, status: cond.isActive})
 })
@@ -49,7 +57,8 @@ condidateArr.map((cond, index) => {
     // return console.log({id: cond._id, friends: cond.friends}) 
 })
 
-// find для одного человека
+console.log('----------find------------')
+// для одного человека
 condidateArr.find(cond => cond._id === '5e216bc9f51c08c39c3ed006')
 condidateArr.find(cond => {
     //новому все св-ва конда
@@ -60,7 +69,8 @@ condidateArr.find(cond => {
     return (!newCond.isActive && newCond.balance > 1000)
 })
 
-// findIndex
+console.log('----------findIndex------------')
+// Возвращает искомый индекс в массиве, если элемент в массиве удовлетворяет условию проверяющей функции или -1, если такое значение не найдено
 let result = condidateArr.findIndex(cond => {
     let newCond = {...cond}
     newCond.balance = +newCond.balance.slice(1).replace(',', '')
@@ -69,7 +79,6 @@ let result = condidateArr.findIndex(cond => {
 })
 
 console.log(result >= 0)
-//
 
 const filterArr2 = condidateArr.filter((cond, index) => {
     // если тру, добавит в новый массив
@@ -80,13 +89,11 @@ const filterArr2 = condidateArr.filter((cond, index) => {
     }
     return false
 })
-let u = filterArr2.map(cond => {
-    
-    // console.log(cond.balance)
+let getBalance = filterArr2.map(cond => {
     return {balance: cond.balance}
 })
 
-console.log(u)
+console.log(getBalance)
 
 let state = condidateArr.map(cond => {
     // если мы только выводим но не меняем свойства, то можно не созд переменную. если меняем (присваиваем чему то), то тогда обязательно в новую переменную!
