@@ -28,11 +28,12 @@ condidateArr.forEach((cond, index) => {
 console.log('----------filter------------')
 // Создаёт новый массив со всеми элементами этого массива, для которых функция фильтрации возвращает true.
 
-const filterArr = [];
-condidateArr.filter((cond, index) => {
+const filterArr = condidateArr.filter((cond, index) => {
     // если тру, добавит в новый массив
     return cond.isActive
 })
+// console.log(filterArr)
+// console.log(condidateArr)
 
 // свой findindex
 Array.prototype.mySomeMethod = function (callback) {
@@ -49,13 +50,15 @@ Array.prototype.mySomeMethod = function (callback) {
 console.log('----------map()------------')
 // Создаёт новый массив с результатами вызова указанной функции на каждом элементе данного массива.
 
-condidateArr.map((cond, index) => {
-    // return console.log({id: cond._id, status: cond.isActive})
+let mapArr = condidateArr.map((cond, index) => {
+    return {id: cond._id, status: cond.isActive}
 })
+console.log(mapArr)
 
-condidateArr.map((cond, index) => {
-    // return console.log({id: cond._id, friends: cond.friends}) 
+let mapArr2 = condidateArr.map((cond, index) => {
+    return {id: cond._id, friends: cond.friends}
 })
+console.log(mapArr2)
 
 console.log('----------find------------')
 // для одного человека
