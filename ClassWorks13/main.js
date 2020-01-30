@@ -126,3 +126,6 @@ inp.onchange = function(e) {
     renderMain(arr.filter(el => el.title.toLowerCase().includes(e.target.value.toLowerCase())))
     console.dir(e.target.value) // всегда строка
 }
+
+
+let arr
