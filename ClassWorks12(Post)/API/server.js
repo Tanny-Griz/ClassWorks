@@ -41,6 +41,11 @@ app.post('/users', (req, res) => {
     res.send('Eser has been created')
 })
 
+app.delete('/users/:index', (req, res) => {
+  usersArr.splice(+req.params.index, 1)
+  res.send('Eser has been deleted')
+})
+
 app.listen(PORT, () => {
     console.log('Server listeniong on 3000')
 })

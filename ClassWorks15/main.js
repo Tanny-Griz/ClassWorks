@@ -9,7 +9,7 @@ const renderSlide = (name) => {
 }
 
 const renderSlideContainer = ((indexOfName) => {
-    return (name) => {
+    return () => {
         indexOfName = indexOfName === arr.length - 1 ? 0 : indexOfName + 1
         sliderContainer.innerHTML = renderSlide(arr[indexOfName])
     }
@@ -18,8 +18,7 @@ const renderSlideContainer = ((indexOfName) => {
 renderSlideContainer()
 
 setInterval(() => {
-    // 
-    renderSlideContainer()
+    
     
 }, 1000)
 

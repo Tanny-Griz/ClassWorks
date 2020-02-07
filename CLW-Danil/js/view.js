@@ -16,12 +16,7 @@ class Pizza {
             <span class="price">
                 ${pizza.price} $
             </span>
-            <button 
-            data-id-asdasd=${pizza.id}
-            id=${pizza.id} 
-            onclick="PizzaModel.showInfo.call(this)"
-            >
-            
+            <button id=${pizza.id} onclick="PizzaModel.showInfo.call(this)">
                 Show info
             </button>
         </div>  
@@ -37,10 +32,4 @@ class Pizza {
     }
 }
 
-const getFromStorage = () => {
-    let arrOfMyPizzas = JSON.parse(localStorage.getItem('myPIzzas'))
-    pizzaList = arrOfMyPizzas ? [...pizzaList, ...arrOfMyPizzas] : pizzaList;
-}
-
-getFromStorage()
 Pizza.renderPizzasList()
