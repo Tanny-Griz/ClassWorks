@@ -1,0 +1,27 @@
+$red: red;
+
+body {
+    header {
+        width: 100%;
+        padding: 10px 20px;
+        button {
+            padding: 5px 10px;
+            font-size: 20px;
+            background: #777777;
+            color: rgb(212, 118, 118);
+            border: #6b6b6b;
+            cursor: pointer;
+            &:hover {
+                background: #cecece;
+                color: black;
+                transition: all .2s;
+            }
+        }
+    }
+    main {
+        border: 1px solid red;
+        padding: 10px 20px;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
